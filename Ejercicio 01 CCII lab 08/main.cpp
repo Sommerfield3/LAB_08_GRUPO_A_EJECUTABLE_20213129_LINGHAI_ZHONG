@@ -27,10 +27,17 @@ using namespace std;
 
 int main (int argc, char *argv[]) {
 	Rectangulo figura1;
+	double escalaTam=4;
 	figura1.obtenerLados(10,15);
 	figura1.cambiarCoordenadasCentroFigura(30,40);
 	figura1.obtenerOCambiarColor("Amarillo");
-	cout<<"asz: "<<figura1.calcularArea();
+	figura1.imprimir();
+	cout<<"Area del rectangulo: "<<figura1.calcularArea()<<" u^2"<<endl;
+	cout<<"Perimetro del rectangulo: "<<figura1.calcularPerimetro()<<" u"<<endl;
+	figura1.escalaLados(escalaTam);
+	cout<<"Aplicamos la escala x"<<escalaTam<<" a cuanto ocupa (area) el rectangulo."<<endl;
+	cout<<"Erea del rectangulo: "<<figura1.calcularArea()<<" u^2"<<endl;
+	cout<<"Perimetro del rectangulo: "<<figura1.calcularPerimetro()<<" u"<<endl;
 	system("pause");
 	return 0;
 }
